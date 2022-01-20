@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :sessions
-  resources :users
-  resources :books
-  get "/hello", to: "application#hello_world"
+  resources :books, only: [:index,:show]
+  post "/signup", to: "users#create"
+  get "/me", to: "users#show"
+  post "/login", to: "sessions#create"
+  delete "/logout", to: "sessions#destroy"
 end
