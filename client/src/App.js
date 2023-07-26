@@ -1,4 +1,8 @@
 import React from 'react';
+import "./App.css";
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+
+//component imports
 import Home from './components/home';
 import NavBar from './components/navbar';
 import Search from './components/search';
@@ -10,7 +14,12 @@ function App() {
 
   return (
     <div className="App">
-    
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
