@@ -17,7 +17,9 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-
+          <Route path="/books" element={<BookContainer />}/>
+          <Route path="/page" element={<BookCard />}/>
+          <Route path ="*" element={<Home />}/>
         </Routes>
       </BrowserRouter>
     </div>
