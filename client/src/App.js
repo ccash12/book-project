@@ -10,7 +10,15 @@ import signup from './components/signup';
 import BookContainer from './components/BookContainer';
  
 function App() {
+  const[user, setUser] = useState(null)
 
+  useEffect(() => {
+    fetch("/me").then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setUser(user))
+      }
+    })
+  }, []);
 
   return (
     <div className="App">
