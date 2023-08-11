@@ -23,12 +23,17 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        {user ? (
+        <Switch>
         <NavBar />
         <Routes>
           <Route path="/books" element={<BookContainer />}/>
           <Route path="/page" element={<BookCard />}/>
           <Route path ="*" element={<Home />}/>
         </Routes>
+        ): (
+        </Switch>
+  )}
       </BrowserRouter>
     </div>
   );
